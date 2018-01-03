@@ -15,7 +15,7 @@
 	<div class="content d-flex flex-column justify-content-center align-items-center">
 		<?php get_template_part('parts/header', 'perfil'); ?>
 		<?php get_template_part('parts/header', 'logo'); ?>		
-
+		<h1><?php echo SITE_NAME; ?> - <?php echo SITE_DESCRIPTION; ?></h1>
 		<?php echo get_theme_mod( 'isp_breve_apresentacao' ); ?>
 
 		<?php get_template_part('parts/icones', 'contatos'); ?>	

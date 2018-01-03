@@ -88,6 +88,10 @@ section.principal .content{
 .img-logo img{
 	max-width: 280px;
 }
+
+header.header h1{
+	display: none;
+}
 .icones-contatos{
 	padding: 0;
 	list-style: none;
