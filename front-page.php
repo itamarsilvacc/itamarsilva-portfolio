@@ -10,10 +10,8 @@
 	<section id="sobre" class="sobre principal" data-scroll-index="0">
 		<div class="content">
 			<header class="header-section">
-				<hgroup>
-					<h1><?php echo get_post_meta($post->ID, 'titulo-sobre-mb', true); ?></h1>
-					<h2><?php echo get_post_meta($post->ID, 'subtitulo-sobre-mb', true); ?></h2>
-				</hgroup>
+				<h1><?php echo get_post_meta($post->ID, 'titulo-sobre-mb', true); ?></h1>
+				<h2><?php echo get_post_meta($post->ID, 'subtitulo-sobre-mb', true); ?></h2>
 			</header>
 
 			<?php echo get_post_meta($post->ID, 'conteudo-sobre-mb', true); ?>	
@@ -36,10 +34,8 @@
 	<section id="projetos" class="projetos principal" data-scroll-index="1">
 		<div class="content">
 			<header class="header-section">
-				<hgroup>
-					<h1><?php echo get_post_meta($post->ID, 'titulo-projetos-mb', true); ?></h1>
-					<h4><?php echo get_post_meta($post->ID, 'subtitulo-projetos-mb', true); ?></h4>
-				<hgroup>
+				<h1><?php echo get_post_meta($post->ID, 'titulo-projetos-mb', true); ?></h1>
+				<h4><?php echo get_post_meta($post->ID, 'subtitulo-projetos-mb', true); ?></h4>
 			</header>
 			
 			<?php get_template_part('parts/carousel', 'projetos'); ?>	
@@ -53,7 +49,7 @@
 	<section id="contatos" class="contatos principal" data-scroll-index="2">
 		<div class="content">
 			<header class="header-section">
-				<h1><?php echo get_post_meta($post->ID, 'titulo-contatos-mb', true); ?></h1>							
+				<h1><?php echo get_post_meta($post->ID, 'titulo-contatos-mb', true); ?></h1>		
 			</header>
 
 			<?php echo get_post_meta($post->ID, 'conteudo-contatos-mb', true); ?>
