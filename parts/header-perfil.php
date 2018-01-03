@@ -1,0 +1,1 @@
+<a class="img-perfil" href="<?php echo SITE_URL; ?>"><img src="<?php echo get_theme_mod( 'isp_imagem_perfil' ); ?>" alt="<?php echo SITE_NAME; ?> - Perfil"></a>

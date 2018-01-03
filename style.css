@@ -1,0 +1,476 @@
+/*
+Theme Name: Itamar Silva
+Theme URI: https://itamarsilva.eti.br
+Author: Itamar Silva
+Author URI: https://itamarsilva.eti.br
+Description: Tema criado para apresentar o portfolio profissional em Desenvolvimento Web.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: itamarsilva
+Domain Path: /languages/
+*/
+
+/* Geral */
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-family: 'Josefin Sans'	, sans-serif;
+	font-size: 0.98rem;
+	line-height: 0.98rem;
+	color: #000;
+	overflow-x: hidden;
+}
+button{
+	cursor: pointer;
+}
+button:focus{
+	outline: none;
+}
+a{
+	color: #000;
+}
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Space Mono', monospace;
+	letter-spacing: -.1rem;
+}
+h1{
+	font-size: 2rem;
+}
+h2{
+	font-size: 1.6rem;
+}
+h3{
+	font-size: 1.5rem;
+}
+h4{
+	font-size: 1.4rem;
+}
+h5{
+	font-size: 1.3rem;
+}
+h6{
+	font-size: 1.2rem;
+}
+img{
+	max-width: 100%;
+}
+section.principal .content{
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+/* Botões */
+.btn-primary{
+	background-color: #000;
+	border-color: #000;
+}
+.btn-primary:hover, .btn-primary:focus{
+	color: #000;
+	background-color: #fff;
+	border-color:#000;
+}
+/* Header */
+.img-perfil, .img-logo{
+	margin-bottom: 20px;
+}
+.img-perfil img{
+	border-radius: 50%;
+	max-width: 200px;
+}
+.img-logo img{
+	max-width: 280px;
+}
+.icones-contatos{
+	padding: 0;
+	list-style: none;
+	margin-top: 20px;
+}
+.icones-contatos li{
+	display: inline-block;
+	padding: 0 5px;
+}
+.icones-contatos li a{
+	display: block;
+}
+.icones-contatos li a i{
+	display: block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+}
+.icones-contatos li a i.icone-email{
+	background-image: url(assets/img/email.svg);	
+}
+.icones-contatos li a i.icone-skype{
+	background-image: url(assets/img/skype.svg);
+}
+.icones-contatos li a i.icone-hangouts{
+	background-image: url(assets/img/hangouts.svg);
+}
+.icones-contatos li a i.icone-github{
+	background-image: url(assets/img/github.svg);
+}
+.icones-contatos li a i.icone-curriculum{
+	background-image: url(assets/img/curriculum.svg);
+}
+.navbar-menu-principal button{
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 37;
+}
+.line-menu-three, .line-menu-two, .line-menu-one{
+	display: block;
+	width: 35px;
+	height: 3px;
+	background-color: #000;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+button[aria-expanded="true"] .line-menu-one{
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #fff;
+}
+button[aria-expanded="true"] .line-menu-two{
+	opacity: 0;
+}
+button[aria-expanded="true"] .line-menu-three{
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #fff;
+}
+.navbar-menu-principal li{
+	text-align: center;
+	padding: 10px 0;
+}
+.navbar-menu-principal a{
+	color: #fff;
+	text-transform: uppercase;
+}
+.navbar-menu-principal .navbar-collapse{
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: inherit;
+	position: absolute;
+	background-color: rgba(0,0,0,.9);
+	color: #fff;
+}
+.navbar-menu-principal .navbar-collapse.show{
+
+}
+/* Main */
+main{
+	z-index: 17;
+	position: fixed;
+}
+/* Section Principal */
+section.principal{
+	position: relative;
+}
+
+section.principal h2{
+	margin-top: 10px;
+}
+section.principal header.header-section h2{
+	margin-top: 0;
+}
+footer.footer-section{
+	text-align: right;
+	margin-top: 40px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 60px;
+}
+footer.footer-section a i{
+	font-size: 60px;
+}
+/* Sobre */
+.icones-lff{
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+.icones-lff li{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.icones-lff li:last-child{
+	margin-right: 0;
+}
+.icones-lff li i{
+	display: block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 80px;
+	height: 80px;
+}
+.icones-lff li i.icone-wordpress{
+	background-image: url(assets/img/wordpress.svg);
+}
+.icones-lff li i.icone-html5{
+	background-image: url(assets/img/html5.svg);
+}
+.icones-lff li i.icone-css3{
+	background-image: url(assets/img/css3.svg);
+}
+.icones-lff li i.icone-javascript{
+	background-image: url(assets/img/javascript.svg);
+}
+.icones-lff li i.icone-php{
+	background-image: url(assets/img/php.svg);
+}
+.icones-lff li i.icone-mysql{
+	background-image: url(assets/img/mysql.svg);
+}
+.icones-lff li i.icone-git{
+	background-image: url(assets/img/git.svg);
+}
+
+/* Projetos */
+#projetos-carousel{
+	position: initial;
+	text-align: right;
+	margin-top: 1em;
+}
+#projetos-carousel .carousel-control-next, #projetos-carousel .carousel-control-prev{
+	position: initial;
+	color: #000;
+	display: inline-block;
+	width: auto;
+	font-size: 2.5em;
+	opacity: 1;
+}
+#projetos-carousel .carousel-control-next{
+	margin-left: .5em;
+}
+.lista-projetos{
+	margin-top: 1em;
+}
+.lista-projetos .carousel-item{
+	padding-left: 0;
+	padding-right: 0;
+}
+.projeto-item{
+	position: relative;
+}
+.projeto-item .overlay{
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.8);
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	padding: 0 40px;
+}
+.projeto-item:hover .overlay{
+	bottom: 0;
+	height: 100%;
+}
+.projeto-item h3{
+	font-size: 1.3rem;
+}
+.projeto-item a{
+	color: #fff;
+}
+.projeto-item a i{
+	position: relative;
+	font-size: 18px;
+	transform: .4s;
+}
+.projeto-item a:hover i{
+	font-size: 20px;
+}
+/* Contatos */
+.contatos form{
+	margin-top: 2em;
+}
+/* Footer */
+footer.footer{
+	padding: 30px 0;
+	text-align: center;
+	z-index: 99;
+}
+
+/* Forms */
+textarea{
+	min-height: 92px;
+}
+button[type="submit"]{
+	float: right;
+}
+.form-control, .form-control:focus{
+	border: 1px solid #000;
+	color: #000;
+}
+.msg-form{ color: #727272; }
+/* Media Queries */
+@media screen and (max-width: 320px){
+	/* Header */
+	.img-perfil img{
+		max-width: 150px;
+	}
+	.img-logo img{
+		max-width: 220px;
+	}
+
+	/* Sobre */
+	.icones-lff li i{
+		width: 60px;
+		height: 60px;
+	}
+
+	/* Projetos */
+	.projeto-item h3{
+		font-size: 1.1rem;
+	}
+	.projeto-item p{
+		font-size: .9rem;
+	}
+}
+
+@media screen and (max-width: 767px){
+	/* Header */
+	header.header{
+		position: relative;
+		display: flex;
+	}
+
+	.navbar-menu-principal button.navbar-toggler.collapsed{
+		background-color: rgba(255,255,255,.8;);
+	}
+	.navbar-menu-principal button.navbar-toggler{
+		background-color: transparent;
+	}
+	.navbar.navbar-menu-principal{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+	}
+	.navbar-menu-principal .navbar-collapse{
+		min-width: 100%;
+		right: -100%;
+	}
+	.navbar-menu-principal .navbar-collapse .navbar-nav{
+		padding-top: 80px;
+	}
+
+	/*Section Principal */
+	section.principal{
+		margin-bottom: 40px;
+	}
+
+	/* Sobre*/
+	.projeto-link{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	/* Footer */
+	footer.footer-section{
+		display: none;
+	}
+}
+@media screen and (min-width: 768px){
+	/* Header */
+	.navbar-menu-principal{
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+	.navbar-menu-principal .navbar-collapse{
+		right: -250px;
+	}
+}
+@media screen and (min-width: 979px){
+	/* Geral */
+	.content{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	/* Header */
+	header.header{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		position: fixed;
+		left: 0;
+		z-index: 27;
+	}
+
+	.navbar-menu-principal .navbar-collapse{
+		min-width: 250px;
+		padding: 80px 0 40px;
+	}
+
+	/* Footer */
+	footer.footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+	footer.footer p{
+		font-size: .96rem;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1280px){
+	/* Header */
+	header.header{
+		padding-top: 30px;
+	}
+	.img-perfil img{
+		max-width: 150px;
+	}
+	.img-logo img{
+		max-width: 220px;
+	}
+
+	/* Main */
+	main.main{
+		padding-bottom: 30px;
+	}
+
+	/*Section Principal */
+	section.principal{
+		padding-top: 30px;
+	}
+
+	/* Sobre */
+	.icones-lff li i{
+		width: 60px;
+		height: 60px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 980px){
+	/* Sobre */
+	.icones-lff li i{
+		width: 40px;
+		height: 40px;
+	}
+}
