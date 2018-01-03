@@ -389,7 +389,9 @@ function isp_form_envio(){
 				$values[ 'email' ],
 				$values[ 'mensagem' ]
 			);
-			if ( !wp_mail( $to, $subject, $message ) )
+			$headers[] = 'Content-Type: text/html; charset=UTF-8';
+			$headers[] = 'From: Itamar Silva <contato@itamarsilva.eti.br>';
+			if ( !wp_mail( $to, $subject, $message, $headers ) )
 				$erro_contato = 'Não foi possível enviar a mensagem...';
 			else
 				$erro_contato = 'Mensagem enviada com sucesso!';
