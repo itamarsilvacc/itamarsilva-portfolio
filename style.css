@@ -21,7 +21,7 @@ body{
 	font-size: 0.98rem;
 	line-height: 0.98rem;
 	color: #000;
-	overflow-x: hidden;
+	overflow-x: none;
 }
 button{
 	cursor: pointer;
