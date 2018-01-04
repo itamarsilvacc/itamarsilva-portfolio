@@ -91,6 +91,7 @@ section.principal .content{
 
 header.header h1{
 	display: none;
+	text-indent: -9999px;
 }
 .icones-contatos{
 	padding: 0;
