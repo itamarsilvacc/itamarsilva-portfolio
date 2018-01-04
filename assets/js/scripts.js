@@ -23,14 +23,27 @@ jQuery(document).ready(function($){
 			    $('.navbar-menu-principal .navbar-collapse').css('right', '-250px');
             }
             else{
-                $('.navbar-menu-principal .navbar-collapse').css('right', '-100%');   
+                $('.navbar-menu-principal .navbar-collapse').css('visibility', 'hidden');                
             }
 		}
 		else{
 			if(screenWidth < 768){
  	           	$('.navbar-menu-principal').css('height', screenHeight);
+ 	           	$('.navbar.navbar-menu-principal').css('position', 'fixed');
+ 	           	$('.navbar-menu-principal .navbar-collapse').css('visibility', 'visible');  
+ 	           	$('.navbar-menu-principal a').click(function(){
+ 	           		$('.navbar-menu-principal').css('height', 0);
+ 	           		$('.navbar.navbar-menu-principal').css('position', 'absolute');
+ 	           		$('.navbar-menu-principal .navbar-collapse').css('visibility', 'hidden');  	           		
+ 	           		if($('#menu-principal').hasClass('show')){
+ 	           			$('.navbar-toggler').attr('aria-expanded', 'false');
+ 	           			$('#menu-principal').removeClass('show');
+ 	           		} 	        	           	
+ 	           	});
  	        }
-			$('.navbar-menu-principal .navbar-collapse').css('right', '0');
+			else{
+				$('.navbar-menu-principal .navbar-collapse').css('right', '0');
+			}
 		}
 	});
 	
