@@ -24,7 +24,7 @@
 				<div class="overlay">
 					<h3><?php the_title(); ?></h3>
 					<p><?php echo get_post_meta($post->ID, 'descricao-projeto', true); ?></p>
-					<p class="projeto-link"><a href="<?php echo get_post_meta($post->ID, 'link-projeto', true); ?>" title="Visitar projeto"><i class="fa fa-external-link"></i></a></p>
+					<p class="projeto-link"><a href="<?php echo get_post_meta($post->ID, 'link-projeto', true); ?>" title="Visitar projeto" target="_blank"><i class="fa fa-external-link"></i></a></p>
 				</div>
 			</article>
 		</div>
