@@ -377,13 +377,13 @@ function isp_form_envio(){
 		}
 
 		if ( !$erro_contato ) {
-			$to = 'contato@itamarsilva.eti.br';
+			$to = 'itamarsilvacc@gmail.com';
 			$subject = 'Mensagem do site';
 			$message = sprintf(
-				'Nome: %s' . PHP_EOL .
-				'Assunto: %s' . PHP_EOL .
-				'Email: %s' . PHP_EOL .
-				'Mensagem: %s',
+				'<strong>Nome:</strong> %s<br>' . PHP_EOL .
+				'<strong>Assunto:</strong> %s<br>' . PHP_EOL .
+				'<strong>Email:</strong> %s<br>' . PHP_EOL .
+				'<strong>Mensagem:</strong><br> %s',
 				$values[ 'nome' ],
 				$values[ 'assunto' ],
 				$values[ 'email' ],
