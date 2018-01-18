@@ -401,7 +401,7 @@ function isp_form_envio(){
 //Gerando log do formulário
 add_action('wp_mail_failed', 'log_mailer_errors', 10, 1);
 function log_mailer_errors(){
-  $fn = ABSPATH . '/mail.log'; // say you've got a mail.log file in your server root
+  $fn = THEME_URL . 'mail.log'; // say you've got a mail.log file in your server root
   $fp = fopen($fn, 'a');
   fputs($fp, "Mailer Error: " . $mailer->ErrorInfo ."\n");
   fclose($fp);
