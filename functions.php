@@ -377,7 +377,7 @@ function isp_form_envio(){
 		}
 
 		if ( !$erro_contato ) {
-			$to = 'itamarsilvacc@gmail.com';
+			$to = 'contato@itamarsilva.eti.br';
 			$subject = 'Mensagem do site';
 			$message = sprintf(
 				'Nome: %s' . PHP_EOL .
@@ -397,12 +397,4 @@ function isp_form_envio(){
 				$erro_contato = 'Mensagem enviada com sucesso!';
 		}
 	}
-}
-//Gerando log do formulário
-add_action('wp_mail_failed', 'log_mailer_errors', 10, 1);
-function log_mailer_errors(){
-  $fn = THEME_URL . 'mail.log'; // say you've got a mail.log file in your server root
-  $fp = fopen($fn, 'a');
-  fputs($fp, "Mailer Error: " . $mailer->ErrorInfo ."\n");
-  fclose($fp);
 }
