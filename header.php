@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<?php wp_head(); ?>
 
@@ -14,11 +14,11 @@
 <header class="col-md-4 header">
 	<div class="content d-flex flex-column justify-content-center align-items-center">
 		<?php get_template_part('parts/header', 'perfil'); ?>
-		<?php get_template_part('parts/header', 'logo'); ?>		
+		<?php get_template_part('parts/header', 'logo'); ?>
 		<h1><?php echo SITE_NAME; ?> - <?php echo SITE_DESCRIPTION; ?></h1>
 		<?php echo get_theme_mod( 'isp_breve_apresentacao' ); ?>
 
-		<?php get_template_part('parts/icones', 'contatos'); ?>	
+		<?php get_template_part('parts/icones', 'contatos'); ?>
 	</div>
 
 	<nav class="navbar navbar-menu-principal">
@@ -30,11 +30,12 @@
 		<div class="collapse navbar-collapse" id="menu-principal">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a href="#sobre" data-scroll-nav="0" title="Sobre mim">Sobre</a></li>
-				<li class="nav-item"><a href="#projetos" data-scroll-nav="1" title="Alguns projetos">Projetos</a></li>
-				<li class="nav-item"><a href="#contatos" data-scroll-nav="2" title="Quer falar comigo?">Contatos</a></li>
+				<li class="nav-item"><a href="#area-atuacao" data-scroll-nav="1" title="Área de Atuação">Atuação</a></li>
+				<li class="nav-item"><a href="#projetos" data-scroll-nav="2" title="Alguns projetos">Projetos</a></li>
+				<li class="nav-item"><a href="#contatos" data-scroll-nav="3" title="Quer falar comigo?">Contatos</a></li>
 			</ul>
 			<!--<p>"<?php // echo get_theme_mod( 'isp_menu_msg' ); ?>"</p>-->
 			<p>"Silence is gold!"</p>
-		</div>					
+		</div>
 	</nav>
 </header>

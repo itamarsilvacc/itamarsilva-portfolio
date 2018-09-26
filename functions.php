@@ -81,7 +81,7 @@ function isp_personalizacao_custome($wp_customize){
 			array(
 			'priority' => 1,
 			'label' => 'Imagem de Perfil',
-			'section' => 'title_tagline',			
+			'section' => 'title_tagline',
 			'settings' => 'isp_imagem_perfil'
 			)));
 	//Textarea para preenchimento da breve apresentação...
@@ -104,7 +104,7 @@ function isp_personalizacao_custome($wp_customize){
 
 		//Seção e campos para o rodapé...
 	    $wp_customize->add_section( 'isp_customize_secao_rodape' , array( 'title' => 'Rodapé', 'priority' => 195, 'description' => '', ) );
-	    
+
 	    $wp_customize->add_setting('isp_customize_secao_rodape_msg', array(
 			'type' => 'theme_mod',
 			'capability' => 'edit_theme_options',
@@ -114,10 +114,10 @@ function isp_personalizacao_custome($wp_customize){
 			'sanitize_callback' => '',
 			'sanitize_js_callback' => ''
 		));
-	    $wp_customize->add_control('isp_customize_secao_rodape_msg', array( 
-            'label' => 'Mensagem do Rodapé', 
+	    $wp_customize->add_control('isp_customize_secao_rodape_msg', array(
+            'label' => 'Mensagem do Rodapé',
             'section' => 'isp_customize_secao_rodape',
-            'type' => 'textarea', 
+            'type' => 'textarea',
             'description' => ''
 	    ));
 
@@ -142,7 +142,7 @@ function isp_personalizacao_custome($wp_customize){
 add_action('customize_register', 'isp_personalizacao_custome');
 
 //Removendo Editor de Conteúdo na Home...
-function isp_esconder_editor_pagina(){	
+/*function isp_esconder_editor_pagina(){
 	if(!empty($_GET['post']) || !empty($_POST['post_ID'])){
 		$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 
@@ -151,11 +151,11 @@ function isp_esconder_editor_pagina(){
 		$template = get_post_meta($post_id, '_wp_page_template', true);
 
 		if ($template == 'front-page.php') {
-			remove_post_type_support('page', 'editor');		
+			remove_post_type_support('page', 'editor');
 		}
 	}
 }
-add_action('admin_init', 'isp_esconder_editor_pagina');
+add_action('admin_init', 'isp_esconder_editor_pagina');*/
 
 //Adicionando Meta Box para Home
 function isp_home_meta_box(){
@@ -167,13 +167,13 @@ function isp_home_meta_box(){
 		add_meta_box('isp_home_meta_box_sobre', 'Sobre', 'isp_home_meta_box_sobre_callback', 'page');
 
 		add_meta_box('isp_home_meta_box_projetos', 'Projetos', 'isp_home_meta_box_projetos_callback', 'page');
-		
+
 		add_meta_box('isp_home_meta_box_contatos', 'Contatos', 'isp_home_meta_box_contatos_callback', 'page');
 	}
 }
 function isp_home_mb_get_meta($value) {
 	global $post;
- 
+
 	$field = get_post_meta($post->ID, $value, true);
 	if ( ! empty($field)) {
 		return is_array($field) ? stripslashes_deep($field) : stripslashes(wp_kses_decode_entities($field));
@@ -188,7 +188,7 @@ function isp_home_meta_box_sobre_callback($post){
 <div class="content">
 	<h4>História</h4>
 	<div class="form-group">
-		<label for="titulo-sobre-mb"><h6>Título</h6></label>			
+		<label for="titulo-sobre-mb"><h6>Título</h6></label>
 		<input class="form-control" type="text" id="titulo-sobre-mb" name="titulo-sobre-mb" value="<?php if(isset($valores_isph_meta_box['titulo-sobre-mb']) && !empty($valores_isph_meta_box['titulo-sobre-mb'])){ echo $valores_isph_meta_box['titulo-sobre-mb'][0]; } ?>">
 	</div>
 	<div class="form-group">
@@ -217,7 +217,7 @@ function isp_home_meta_box_projetos_callback($post){
 ?>
 <div class="content">
 	<div class="form-group">
-		<label for="titulo-projetos-mb"><h6>Título</h6></label>			
+		<label for="titulo-projetos-mb"><h6>Título</h6></label>
 		<input class="form-control" type="text" id="titulo-projetos-mb" name="titulo-projetos-mb" value="<?php if(isset($valores_isph_meta_box['titulo-projetos-mb']) && !empty($valores_isph_meta_box['titulo-projetos-mb'])){ echo $valores_isph_meta_box['titulo-projetos-mb'][0]; } ?>">
 	</div>
 	<div class="form-group">
@@ -233,10 +233,10 @@ function isp_home_meta_box_contatos_callback($post){
 ?>
 <div class="content">
 	<div class="form-group">
-		<label for="titulo-contatos-mb"><h6>Título</h6></label>			
+		<label for="titulo-contatos-mb"><h6>Título</h6></label>
 		<input class="form-control" type="text" id="titulo-contatos-mb" name="titulo-contatos-mb" value="<?php if(isset($valores_isph_meta_box['titulo-contatos-mb']) && !empty($valores_isph_meta_box['titulo-contatos-mb'])){ echo $valores_isph_meta_box['titulo-contatos-mb'][0]; } ?>">
 	</div>
-	
+
 	<div class="form-group">
 		<label for="conteudo-contatos-mb"><h6>Conteúdo</h6></label>
 			<?php
@@ -300,7 +300,7 @@ function isp_projeto_post_type(){
 				'thumbnail'
 				),
 			'rewrite' => false
-	));	
+	));
 }
 add_action('init', 'isp_projeto_post_type');
 

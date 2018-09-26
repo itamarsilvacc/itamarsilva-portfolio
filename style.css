@@ -84,6 +84,8 @@ section.principal .content{
 .img-perfil img{
 	border-radius: 50%;
 	max-width: 200px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 .img-logo img{
 	max-width: 280px;
@@ -114,7 +116,7 @@ header.header h1{
 	height: 30px;
 }
 .icones-contatos li a i.icone-email{
-	background-image: url(assets/img/email.svg);	
+	background-image: url(assets/img/email.svg);
 }
 .icones-contatos li a i.icone-skype{
 	background-image: url(assets/img/skype.svg);
