@@ -313,7 +313,7 @@ function isp_projetos_meta_box_callback($post){
 ?>
 	<table class="isp-projetos-dp">
 		<tbody>
-			<tr>
+			<tr style="vertical-align: top;">
 				<td style="padding: 10px;">
 					<label for="descricao-projeto">Descrição</label><br>
 					<textarea name="descricao-projeto" id="descricao-projeto" rows="5" cols="20"><?php if(isset($valores_ispp_meta_box['descricao-projeto']) && !empty($valores_ispp_meta_box['descricao-projeto'])){ echo $valores_ispp_meta_box['descricao-projeto'][0]; } ?></textarea>
@@ -321,6 +321,14 @@ function isp_projetos_meta_box_callback($post){
 				<td style="padding: 10px;">
 					<label for="link-projeto">Link</label><br>
 					<input type="text" name="link-projeto" id="link-projeto" value="<?php if(isset($valores_ispp_meta_box['link-projeto']) && !empty($valores_ispp_meta_box['link-projeto'])){ echo $valores_ispp_meta_box['link-projeto'][0]; } ?>">
+				</td>
+				<td style="padding: 10px;">
+					<label for="creditos-projeto">Créditos</label><br>
+					<input type="text" name="creditos-projeto" id="creditos-projeto" value="<?php if(isset($valores_ispp_meta_box['creditos-projeto']) && !empty($valores_ispp_meta_box['creditos-projeto'])){ echo $valores_ispp_meta_box['creditos-projeto'][0]; } ?>">
+				</td>
+				<td style="padding: 10px;">
+					<label for="link-creditos-projeto">Link dos Créditos</label><br>
+					<input type="text" name="link-creditos-projeto" id="link-creditos-projeto" value="<?php if(isset($valores_ispp_meta_box['link-creditos-projeto']) && !empty($valores_ispp_meta_box['link-creditos-projeto'])){ echo $valores_ispp_meta_box['link-creditos-projeto'][0]; } ?>">
 				</td>
 			</tr>
 		</tbody>
@@ -335,6 +343,12 @@ function isp_projetos_save_meta_box($post_id){
 	}
 	if(array_key_exists('link-projeto', $_POST)){
 		update_post_meta($post_id, 'link-projeto', $_POST['link-projeto']);
+	}
+	if(array_key_exists('creditos-projeto', $_POST)){
+		update_post_meta($post_id, 'creditos-projeto', $_POST['creditos-projeto']);
+	}
+	if(array_key_exists('link-creditos-projeto', $_POST)){
+		update_post_meta($post_id, 'link-creditos-projeto', $_POST['link-creditos-projeto']);
 	}
 }
 add_action('save_post', 'isp_projetos_save_meta_box');

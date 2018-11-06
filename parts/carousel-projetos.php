@@ -22,9 +22,9 @@
 			<article class="projeto-item">
 				<img src="<?php echo esc_url($imagem_proj_url[0]); ?>" alt="<?php echo the_title(); ?>">
 				<div class="overlay">
-					<h3><?php the_title(); ?></h3>
+					<h3><?php the_title(); ?> <span class="projeto-link"><a href="<?php echo get_post_meta($post->ID, 'link-projeto', true); ?>" title="Visitar projeto" target="_blank"><i class="fa fa-external-link"></i></a></span></h3>
 					<p><?php echo get_post_meta($post->ID, 'descricao-projeto', true); ?></p>
-					<p class="projeto-link"><a href="<?php echo get_post_meta($post->ID, 'link-projeto', true); ?>" title="Visitar projeto" target="_blank"><i class="fa fa-external-link"></i></a></p>
+					<p><strong>Créditos:</strong> <a href="<?php echo get_post_meta($post->ID, 'link-creditos-projeto', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'creditos-projeto', true); ?></a></p>
 				</div>
 			</article>
 		</div>
@@ -33,6 +33,6 @@
 				endwhile;
 				wp_reset_postdata();
 			endif;
-		?>							
+		?>
 	</div>
 </div>
