@@ -115,19 +115,16 @@ header.header h1{
 	width: 30px;
 	height: 30px;
 }
-.icones-contatos li a i.icone-email{
+.icone-email{
 	background-image: url(assets/img/email.svg);
 }
-.icones-contatos li a i.icone-skype{
-	background-image: url(assets/img/skype.svg);
-}
-.icones-contatos li a i.icone-hangouts{
-	background-image: url(assets/img/hangouts.svg);
-}
-.icones-contatos li a i.icone-github{
+.icone-github{
 	background-image: url(assets/img/github.svg);
 }
-.icones-contatos li a i.icone-curriculum{
+.icone-linkedin{
+	background-image: url(assets/img/linkedin.svg);
+}
+.icone-curriculum{
 	background-image: url(assets/img/curriculum.svg);
 }
 .navbar-menu-principal button{
