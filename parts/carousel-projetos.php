@@ -17,10 +17,14 @@
 			if($query->have_posts()) :
 				while($query->have_posts()) : $query->the_post();
 					$imagem_proj_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+					$imagem_proj_url_mobile = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-mobile' );
 		?>
 		<div class="col-md-12 carousel-item <?php if($count_posts == 0) { echo 'active'; } ?>">
 			<article class="projeto-item">
-				<img src="<?php echo esc_url($imagem_proj_url[0]); ?>" alt="<?php echo the_title(); ?>">
+				<picture>
+					<source src="<?php echo esc_url($imagem_proj_url_mobile[0]); ?>" media="(max-width: 767px)">
+					<img src="<?php echo esc_url($imagem_proj_url[0]); ?>" alt="<?php echo the_title(); ?>">
+				</picture>
 				<div class="overlay">
 					<h3><?php the_title(); ?> <span class="projeto-link"><a href="<?php echo get_post_meta($post->ID, 'link-projeto', true); ?>" title="Visitar projeto" target="_blank"><i class="fa fa-external-link"></i></a></span></h3>
 					<p><?php echo get_post_meta($post->ID, 'descricao-projeto', true); ?></p>

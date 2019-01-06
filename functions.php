@@ -18,6 +18,9 @@ if (!function_exists('isp_ativacao_tema')) :
 		//Adicionando o suporte à imagem destacada ou thumbnail
 		add_theme_support( 'post-thumbnails' );
 
+		// Add thumbnails size
+		add_image_size( 'full-mobile', 385, 178 );
+
 		//Registrando menu de navegação...
 		register_nav_menus(array(
 			'menu_principal' => 'Menu Principal'
