@@ -398,6 +398,11 @@ button[type="submit"]{
 		right: 10px;
 	}
 
+	/* Projetos */
+	.projeto-item .overlay p:first-of-type{
+		display: none;
+	}
+
 	/* Footer */
 	footer.footer-section{
 		display: none;
